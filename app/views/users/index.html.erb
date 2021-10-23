@@ -34,10 +34,10 @@
               </tr>
             </thead>
             <tbody>
-               <% @user.books.each do |user| %>
+               <% @users.each do |user| %>
               <tr>
-                 <td><%= attachment_image_tag(@bookuser, :profile_image, :fill,40,40,fallback: "no-image-icon.jpg")%></td>
-                <td><%= @user.name %></td>
+                 <td><%= attachment_image_tag(user, :profile_image, :fill,40,40,fallback: "no-image-icon.jpg")%></td>
+                <td><%= user.name %></td>
                 <td><%=link_to "Show",user_path(user.id) %></td>
               </tr>
               <%end%>
